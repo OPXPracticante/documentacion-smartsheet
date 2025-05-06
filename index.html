@@ -2,61 +2,114 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Documentación Smartsheet</title>
+  <title>Smartsheet Documentation</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f7f9fc;
-      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #f5f8fc;
     }
+
     header {
-      background: #009cde;
+      display: flex;
+      align-items: center;
+      background-color: #00a5e5;
       color: white;
-      padding: 1rem;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
-    .logo {
-      height: 50px;
-      vertical-align: middle;
-      margin-right: 10px;
+
+    header img {
+      height: 45px;
+      margin-right: 15px;
     }
+
+    header h1 {
+      font-size: 1.5rem;
+      margin: 0;
+      font-weight: 400;
+    }
+
     .container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin-top: 2rem;
+      padding: 2rem;
     }
+
     .card {
-      background: #e9eef4;
-      border-radius: 8px;
-      padding: 1rem 2rem;
+      background-color: #e9eef4;
       margin: 1rem;
-      width: 250px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      cursor: pointer;
-      transition: 0.3s ease;
+      padding: 2rem;
+      width: 240px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
       text-decoration: none;
       color: #005a9c;
+      font-size: 1.1rem;
     }
+
     .card:hover {
-      background: #d8e4f0;
+      transform: translateY(-5px);
+      background-color: #d8e9f7;
+    }
+
+    .icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        width: 90%;
+      }
+
+      header h1 {
+        font-size: 1.2rem;
+      }
+
+      header img {
+        height: 35px;
+      }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Thyssenkrupp_AG_Logo_2015.svg/2560px-Thyssenkrupp_AG_Logo_2015.svg.png" class="logo" alt="thyssenkrupp">
-  <span style="font-size: 1.5rem;">Smartsheet Documentation</span>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Thyssenkrupp_AG_Logo_2015.svg/512px-Thyssenkrupp_AG_Logo_2015.svg.png" alt="thyssenkrupp logo">
+  <h1>Smartsheet Documentation</h1>
 </header>
 
 <div class="container">
-  <a class="card" href="excel/">📊 Formatos Excel</a>
-  <a class="card" href="pdf/">📄 Documentos PDF</a>
-  <a class="card" href="word/">📝 Plantillas Word</a>
-  <a class="card" href="diapositivas/">📽️ Diapositivas</a>
+  <a href="excel/" class="card">
+    <span class="icon">📊</span>
+    Formatos Excel
+  </a>
+  <a href="pdf/" class="card">
+    <span class="icon">📄</span>
+    Documentos PDF
+  </a>
+  <a href="word/" class="card">
+    <span class="icon">📝</span>
+    Plantillas Word
+  </a>
+  <a href="diapositivas/" class="card">
+    <span class="icon">📽️</span>
+    Diapositivas
+  </a>
 </div>
+
+</body>
+</html>
+
 
 </body>
 </html>
